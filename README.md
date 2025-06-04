@@ -1,5 +1,5 @@
 # Jake Gresh Resume
  
-[pdf](Jake%20Gresh%20Resume%20CS.pdf)
+[View/Download ,pdf](Jake%20Gresh%20Resume%20CS.pdf)
 
-[docx](Jake%20Gresh%20Resume%20CS.docx)
+[Download .docx](Jake%20Gresh%20Resume%20CS.docx)
