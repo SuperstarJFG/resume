@@ -1,4 +1,4 @@
-name: Convert DOCX to PDF
+name: Reminder to Convert DOCX to PDF
 
 on:
   push:
@@ -6,25 +6,8 @@ on:
       - '*.docx'
 
 jobs:
-  convert-docx:
+  notify-docx-push:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Install LibreOffice
-      run: sudo apt-get update && sudo apt-get install -y libreoffice
-
-    - name: Convert DOCX to PDF
-      run: |
-        mkdir -p pdf_output
-        for docx_file in *.docx; do
-          filename=$(basename "$docx_file" .docx)
-          libreoffice --headless --convert-to pdf "$docx_file" --outdir pdf_output
-        done
-
-    - name: Upload PDF artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: Converted PDFs
-        path: pdf_output/
+      - name: Dummy notification step
+        run: echo "A DOCX file was pushed. This is a dummy workflow for notification purposes."
